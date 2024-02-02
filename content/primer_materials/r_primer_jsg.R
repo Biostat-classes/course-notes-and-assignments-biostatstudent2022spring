@@ -1,5 +1,5 @@
 ##INTRODUCTION TO R####
-##JSG, 7/2/22
+##JSG, 7/2/22a
 
 #this is a broad introduction to how R works and what it can do
 #we'll return to individual topics in later sessions (both theory and practice)
