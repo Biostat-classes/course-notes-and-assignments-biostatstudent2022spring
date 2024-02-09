@@ -248,7 +248,8 @@ file
 
 #which is then read by the read.csv function
 
-my_dataset <- read.csv(file, stringsAsFactors = T)
+my_dataset <- read.csv("example - Sheet1.csv", stringsAsFactors = T)
+example...Sheet1 <- read.csv("/cloud/project/content/primer_materials/example - Sheet1.csv", stringsAsFactors=TRUE)
 
 # Since ~2020 you need to as StringsAsFactors = T to read in characters as factors
 # (what we typically want)
@@ -426,7 +427,7 @@ levels(airquality$Month)
 #data frames have names(headers) you can change similarly
 #you can also specifically change indiviudal names or levels with
 names(airquality) #gives you column names
-names(airquality)[names(airquality) %in% "Month"] = "example_change" # %in% looks for matches
+names(airquality)[names(airquality) %in% "Month"] <- "example_change" # %in% looks for matches
 names(airquality)
 names(airquality)[names(airquality) %in% "example_change"] = "Month"
 
