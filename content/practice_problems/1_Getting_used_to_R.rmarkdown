@@ -6,13 +6,16 @@ editor:
     wrap: 72
 ---
 
+
 <!-- COMMENT NOT SHOW IN ANY OUTPUT: Code chunk below sets overall defaults for .qmd file; these inlcude showing output by default and looking for files relative to .Rpoj file, not .qmd file, which makes putting filesin different folders easier  -->
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
 source("../globals.R")
 ```
+
 
 ### Overview
 
@@ -28,9 +31,11 @@ file)](../Primer_material/Tools_overview.qmd). **example bold**
 Rmd files differ from R files in that they combine regular text with
 code chunks. This is a code chunk
 
+
 ```{r}
 print("this is a chunk")
 ```
+
 
 Code chunks combine code with output. When combined with regular
 text/prose, this makes it easier to produce a range of documents. You
@@ -65,9 +70,11 @@ see output, note you can press the green button next to an R chunk.
 ![The green arrows just runs the chunk in the console and shows the
 output](https://lh3.googleusercontent.com/pw/AM-JKLUYgHbhk7YzhXdAZwV-fvLFlnOc4IcCMwt6U21qsHP7sXcjQ5xDL86NewZo2THSGAveP0Y1cL2PP4yysUTLn4N6iXoO6B1h_8RtAlqmNONY2W5V_j_4hqtQ8d3GhroTNJewT3oEqSVA-Vjh4IkDRqE-pw=w784-h73-no?authuser=0)
 
+
 ```{r}
 print("this is a chunk")
 ```
+
 
 Now we'll start changing the file to show you how rmarkdown works.
 First, amend the file by replacing the **NAME** and **DATE** spots in
@@ -103,9 +110,11 @@ video](https://www.youtube.com/watch?v=shs95EH4EhY&list=PLmnVhyQ-20EUFRmsjpYTyB5
 
 Let x be defined by
 
+
 ```{r}
 x <- 5:15
 ```
+
 
 Try executing this chunk (in R studio, not the webview) by clicking the
 *Run* button within the chunk or by placing your cursor inside it and
@@ -140,15 +149,19 @@ INSERT AN R CHUNK HERE AND RUN EACH OF THESE COMMANDS. Add a new chunk
 by clicking the *Insert Chunk* button on the toolbar or by pressing
 *Ctrl+Alt+I*. Then state what each of these does.
 
+
 ```{r}
 length(x)
 ```
 
+
 length returns the number of items.
+
 
 ```{r}
 max(x)
 ```
+
 
 #### 3
 
@@ -159,9 +172,11 @@ RUN EACH OF THESE COMMANDS. Then state what each of these does.
 
 You can read in a dataset from the internet following this protocol.
 
+
 ```{r}
 sleep <- read.csv("http://raw.githubusercontent.com/jsgosnell/CUNY-BioStats/master/datasets/sleep.csv", stringsAsFactors = T)
 ```
+
 
 Run this chunk and note it has added an object named `sleep` to the
 environment.
@@ -194,30 +209,38 @@ words and R doesn't know how to plot them. There are many ways to handle
 this. You can modify the read.csv command (add stringsAsFactors = T
 option), eg
 
+
 ```{r, eval=F}
 sleep <- read.csv("http://raw.githubusercontent.com/jsgosnell/CUNY-BioStats/master/datasets/sleep.csv", stringsAsFactors = T)
 ```
+
 
 If you do this, you'll need to rechange anything you previously updated
 to the object (like renaming the BodyWt column).
 
 You can also modify a single column for the actual object
 
+
 ```{r, eval = F}
 sleep$Primate <- factor (sleep$Primate)
 ```
 
+
 or for a single command, eg (plot not actually shown!)
+
 
 ```{r, eval = F}
 plot(BodyWt ~ factor(Primate), data = sleep)
 ```
 
+
 NOTE YOU CAN ADD A PLOT TO THE DOCUMENT TOO! AMEND THE BELOW AS NEEDED.
+
 
 ```{r}
 plot(cars)
 ```
+
 
 #### 7
 
@@ -265,3 +288,4 @@ Enter it into R (manually or via a .csv). (Hint: you have a piece of
 this in the code already). Check your input using the head() command.
 
 ENTER ANSWERS HERE. ADD ANY R CHUNKS YOU USED TO FIND THE ANSWER.
+
